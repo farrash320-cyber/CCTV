@@ -1,86 +1,87 @@
-// LOGIN
-function login() {
+function login(){
 
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+let username =
+document.getElementById(
+"username"
+).value;
 
-    if (
-        username === "keluarga" &&
-        password === "cctv2026"
-    ) {
+let password =
+document.getElementById(
+"password"
+).value;
 
-        // Simpan status login
-        localStorage.setItem("login", "true");
+if(
+username==="keluarga"
+&&
+password==="cctv2026"
+){
 
-        // Masuk ke dashboard
-        window.location.href = "dashboard.html";
+window.location.href=
+"dashboard.html";
 
-    } else {
+}
+else{
 
-        alert("Username atau password salah!");
+alert(
+"Username atau password salah!"
+);
 
-    }
+}
 
 }
 
 
-// CEK LOGIN
-function checkLogin() {
+function logout(){
 
-    let loginStatus = localStorage.getItem("login");
-
-    if (loginStatus !== "true") {
-
-        window.location.href = "index.html";
-
-    }
+window.location.href=
+"index.html";
 
 }
 
 
-// LOGOUT
-function logout() {
+function updateClock(){
 
-    localStorage.removeItem("login");
+let now=new Date();
 
-    window.location.href = "index.html";
+let clock=
+document.getElementById(
+"clock"
+);
 
-}
+let date=
+document.getElementById(
+"date"
+);
 
+if(clock){
 
-// JAM DAN TANGGAL
-function updateClock() {
-
-    let now = new Date();
-
-    let clock = document.getElementById("clock");
-    let date = document.getElementById("date");
-
-    if (clock) {
-
-        clock.innerHTML = now.toLocaleTimeString("id-ID");
-
-    }
-
-    if (date) {
-
-        date.innerHTML = now.toLocaleDateString("id-ID", {
-
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-
-        });
-
-    }
+clock.innerHTML=
+now.toLocaleTimeString(
+"id-ID"
+);
 
 }
 
+if(date){
 
-// UPDATE SETIAP DETIK
-setInterval(updateClock, 1000);
+date.innerHTML=
+now.toLocaleDateString(
+"id-ID",
+{
+weekday:"long",
+day:"numeric",
+month:"long",
+year:"numeric"
+}
+);
 
+}
 
-// JALANKAN SEKALI SAAT HALAMAN DIBUKA
+}
+
 updateClock();
+
+setInterval(
+updateClock,
+1000
+);
