@@ -70,3 +70,99 @@ function bukaCCTV(){
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCTV Rumah</title>
+
+<style>
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.container{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    width:320px;
+    text-align:center;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.lihat{
+    background:#22c55e;
+    color:white;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border-radius:10px;
+    border:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="home">
+    <h1>📷 CCTV Rumah</h1>
+    <button class="lihat" onclick="tampilLogin()">
+        Lihat CCTV
+    </button>
+</div>
+
+<div class="container" id="login" style="display:none;">
+    <h1>🔒 Login</h1>
+
+    <input type="text" id="username" placeholder="Username">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="lihat" onclick="login()">
+        Masuk
+    </button>
+</div>
+
+<script>
+function tampilLogin(){
+    document.getElementById("home").style.display = "none";
+    document.getElementById("login").style.display = "block";
+}
+
+function login(){
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if(username === "admin" && password === "123456"){
+        alert("Login berhasil!");
+
+        // nanti bisa diganti ke halaman CCTV
+        window.location.href = "cctv.html";
+    }else{
+        alert("Username atau password salah!");
+    }
+}
+</script>
+
+</body>
+</html>
