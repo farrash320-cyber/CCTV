@@ -16,21 +16,21 @@
 }
 
 body{
-    background:#07142b;
+    background:#081225;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
     color:white;
 }
 
 .card{
     width:360px;
     background:#1b263b;
-    padding:40px;
     border-radius:25px;
+    padding:40px;
     text-align:center;
-    box-shadow:0 0 30px rgba(0,0,0,.3);
+    box-shadow:0 0 20px rgba(0,0,0,.3);
 }
 
 h1{
@@ -39,7 +39,7 @@ h1{
 
 p{
     color:#d7d7d7;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 input{
@@ -65,23 +65,28 @@ button{
     background:#22c55e;
 }
 
-.red{
-    background:#ef4444;
-}
-
 .blue{
     background:#3b82f6;
 }
 
-#loginPage,
-#cctvPage{
-    display:none;
+.red{
+    background:#ef4444;
 }
 
 .status{
     color:#22c55e;
     font-size:18px;
     margin-bottom:20px;
+}
+
+.jam{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+#loginPage,
+#dashboardPage{
+    display:none;
 }
 
 </style>
@@ -93,9 +98,12 @@ button{
 
 <h1>📷 CCTV Rumah</h1>
 
-<p>Klik tombol di bawah untuk mengakses CCTV.</p>
+<p>
+Selamat datang.
+</p>
 
-<button class="green" onclick="showLogin()">
+<button class="green"
+onclick="showLogin()">
 Lihat CCTV
 </button>
 
@@ -123,8 +131,8 @@ Masuk
 </div>
 
 
-<!-- HALAMAN CCTV -->
-<div class="card" id="cctvPage">
+<!-- DASHBOARD -->
+<div class="card" id="dashboardPage">
 
 <h1>📷 CCTV Rumah</h1>
 
@@ -132,10 +140,10 @@ Masuk
 ● ONLINE
 </div>
 
-<p>
-Login berhasil.<br><br>
-Halaman CCTV siap digunakan.
-</p>
+<div class="jam"
+id="clock">
+00:00:00
+</div>
 
 <button class="blue">
 Kamera Depan
@@ -172,6 +180,7 @@ document.getElementById("loginPage").style.display="block";
 
 }
 
+
 function login(){
 
 let username=document.getElementById("username").value;
@@ -180,7 +189,7 @@ let password=document.getElementById("password").value;
 if(username==="keluarga" && password==="cctv2026"){
 
 document.getElementById("loginPage").style.display="none";
-document.getElementById("cctvPage").style.display="block";
+document.getElementById("dashboardPage").style.display="block";
 
 }else{
 
@@ -190,15 +199,32 @@ alert("Username atau password salah!");
 
 }
 
+
 function logout(){
 
-document.getElementById("cctvPage").style.display="none";
+document.getElementById("dashboardPage").style.display="none";
 document.getElementById("homePage").style.display="block";
 
 document.getElementById("username").value="";
 document.getElementById("password").value="";
 
 }
+
+
+function updateClock(){
+
+let now=new Date();
+
+let jam=String(now.getHours()).padStart(2,"0");
+let menit=String(now.getMinutes()).padStart(2,"0");
+let detik=String(now.getSeconds()).padStart(2,"0");
+
+document.getElementById("clock").innerHTML=
+jam+":"+menit+":"+detik;
+
+}
+
+setInterval(updateClock,1000);
 
 </script>
 
