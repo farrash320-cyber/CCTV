@@ -1,111 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>CCTV Premium</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
-}
-
-body{
-background:#081225;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:white;
-}
-
-.page{
-display:none;
-width:100%;
-justify-content:center;
-align-items:center;
-}
-
-.page.active{
-display:flex;
-}
-
-.card{
-width:380px;
-background:#1b263b;
-padding:40px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 0 30px rgba(0,0,0,.4);
-}
-
-h1{
-margin-bottom:20px;
-}
-
-p{
-color:#d9d9d9;
-margin-bottom:20px;
-}
-
-input{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:none;
-border-radius:12px;
-font-size:16px;
-}
-
-button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:12px;
-font-size:17px;
-cursor:pointer;
-color:white;
-margin-bottom:15px;
-}
-
-.green{
-background:#22c55e;
-}
-
-.blue{
-background:#3b82f6;
-}
-
-.red{
-background:#ef4444;
-}
-
-.status{
-color:#22c55e;
-margin-bottom:20px;
-font-size:18px;
-}
-
-.clock{
-font-size:35px;
-margin-bottom:10px;
-}
-
-.date{
-color:#d9d9d9;
-margin-bottom:25px;
-}
-
-</style>
 </head>
 <body>
 
 <!-- HOME -->
 <div class="page active" id="homePage">
+
 <div class="card">
 
 <h1>📷 CCTV Premium</h1>
@@ -114,16 +23,21 @@ margin-bottom:25px;
 Selamat datang
 </p>
 
-<button class="green" onclick="showLogin()">
+<button class="green"
+onclick="showLogin()">
+
 Lihat CCTV
+
 </button>
 
 </div>
+
 </div>
 
 
 <!-- LOGIN -->
 <div class="page" id="loginPage">
+
 <div class="card">
 
 <h1>🔒 Login</h1>
@@ -138,124 +52,78 @@ type="password"
 id="password"
 placeholder="Password">
 
-<button class="green"
+<button
+class="green"
 onclick="login()">
+
 Masuk
+
 </button>
 
 </div>
+
 </div>
+
 
 
 <!-- DASHBOARD -->
 <div class="page" id="dashboardPage">
+
 <div class="card">
 
 <h1>📷 CCTV Premium</h1>
 
 <div class="status">
+
 ● ONLINE
+
 </div>
 
-<div class="clock" id="clock">
+<div class="clock"
+id="clock">
+
 00:00:00
+
 </div>
 
-<div class="date" id="date">
+<div class="date"
+id="date">
+
 -
+
 </div>
 
 <button class="blue">
+
 📹 Kamera Depan
+
 </button>
 
 <button class="blue">
+
 📹 Kamera Garasi
+
 </button>
 
 <button class="blue">
+
 📹 Kamera Belakang
+
 </button>
 
-<button class="red"
+<button
+class="red"
 onclick="logout()">
+
 Logout
+
 </button>
 
 </div>
+
 </div>
 
-
-<script>
-
-function openPage(id){
-
-document.querySelectorAll(".page")
-.forEach(page=>page.classList.remove("active"));
-
-document.getElementById(id)
-.classList.add("active");
-
-}
-
-function showLogin(){
-
-openPage("loginPage");
-
-}
-
-function login(){
-
-let username =
-document.getElementById("username").value;
-
-let password =
-document.getElementById("password").value;
-
-if(username==="keluarga" &&
-password==="cctv2026"){
-
-openPage("dashboardPage");
-
-}else{
-
-alert("Username atau password salah!");
-
-}
-
-}
-
-function logout(){
-
-document.getElementById("username").value="";
-document.getElementById("password").value="";
-
-openPage("homePage");
-
-}
-
-function updateClock(){
-
-let now = new Date();
-
-document.getElementById("clock")
-.innerHTML = now.toLocaleTimeString("id-ID");
-
-document.getElementById("date")
-.innerHTML = now.toLocaleDateString("id-ID",{
-weekday:"long",
-day:"numeric",
-month:"long",
-year:"numeric"
-});
-
-}
-
-updateClock();
-
-setInterval(updateClock,1000);
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
