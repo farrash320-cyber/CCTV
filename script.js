@@ -1,18 +1,22 @@
 function openPage(id){
 
-document.querySelectorAll(".page")
+document
+.querySelectorAll(".page")
 .forEach(page=>page.classList.remove("active"));
 
-document.getElementById(id)
+document
+.getElementById(id)
 .classList.add("active");
 
 }
+
 
 function showLogin(){
 
 openPage("loginPage");
 
 }
+
 
 function login(){
 
@@ -22,12 +26,17 @@ document.getElementById("username").value;
 let password =
 document.getElementById("password").value;
 
-if(username==="keluarga" &&
-password==="cctv2026"){
+
+if(
+username==="keluarga"
+&&
+password==="cctv2026"
+){
 
 openPage("dashboardPage");
 
-}else{
+}
+else{
 
 alert("Username atau password salah!");
 
@@ -35,31 +44,47 @@ alert("Username atau password salah!");
 
 }
 
+
 function logout(){
 
-document.getElementById("username").value="";
-document.getElementById("password").value="";
+document
+.getElementById("username")
+.value="";
+
+document
+.getElementById("password")
+.value="";
 
 openPage("homePage");
 
 }
 
+
+
 function updateClock(){
 
 let now = new Date();
 
-document.getElementById("clock")
-.innerHTML = now.toLocaleTimeString("id-ID");
+document
+.getElementById("clock")
+.innerHTML=
+now.toLocaleTimeString("id-ID");
 
-document.getElementById("date")
-.innerHTML = now.toLocaleDateString("id-ID",{
+document
+.getElementById("date")
+.innerHTML=
+now.toLocaleDateString(
+"id-ID",
+{
 weekday:"long",
 day:"numeric",
 month:"long",
 year:"numeric"
-});
+}
+);
 
 }
+
 
 updateClock();
 
