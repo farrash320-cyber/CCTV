@@ -5,71 +5,99 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width,initial-scale=1">
+content="width=device-width,initial-scale=1.0">
 
 <title>Dashboard</title>
 
-<link rel="stylesheet"
+<link
+rel="stylesheet"
 href="style.css">
 
 </head>
 <body onload="checkLogin()">
 
+<div class="container">
+
+<!-- SIDEBAR -->
+
 <div class="sidebar">
 
-<h2>
+<div class="logo">
 
-📷 CCTV
+📷
 
-</h2>
+</div>
 
-<a href="dashboard.html">
+<a
+class="nav-item"
+href="dashboard.html">
 
-🏠 Dashboard
-
-</a>
-
-<a href="cameras.html">
-
-📹 Kamera
+🏠
 
 </a>
 
-<a href="profile.html">
 
-👤 Profil
+<a
+class="nav-item"
+href="cameras.html">
 
-</a>
-
-<a href="settings.html">
-
-⚙️ Pengaturan
+📹
 
 </a>
 
-<a href="#"
+
+<a
+class="nav-item"
+href="profile.html">
+
+👤
+
+</a>
+
+
+<a
+class="nav-item"
+href="settings.html">
+
+⚙️
+
+</a>
+
+
+<div
+class="nav-item red"
 onclick="logout()">
 
-🚪 Logout
+🚪
 
-</a>
+</div>
 
 </div>
 
 
+<!-- MAIN -->
+
 <div class="main">
+
+<div class="glass">
+
+<div class="title">
 
 <h1>
 
-Dashboard
+CCTV Premium
 
 </h1>
 
-<div class="status">
+</div>
+
+
+<div class="online">
 
 🟢 ONLINE
 
 </div>
+
 
 <div
 class="clock"
@@ -79,11 +107,84 @@ id="clock">
 
 </div>
 
+
 <div
 class="date"
 id="date">
 
 -
+
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+📹 Kamera Depan
+
+</div>
+
+<div>
+
+›
+
+</div>
+
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+📹 Kamera Garasi
+
+</div>
+
+<div>
+
+›
+
+</div>
+
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+📹 Kamera Belakang
+
+</div>
+
+<div>
+
+›
+
+</div>
+
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+📹 Ruang Tamu
+
+</div>
+
+<div>
+
+›
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
