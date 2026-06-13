@@ -1,29 +1,33 @@
-function showPage(id){
+function login(){
 
-document.querySelectorAll(".page")
-.forEach(page=>page.classList.remove("active"));
+    let username =
+    document.getElementById("username").value;
 
-document.getElementById(id)
-.classList.add("active");
+    let password =
+    document.getElementById("password").value;
 
-}
+    if(
+        username==="keluarga"
+        &&
+        password==="cctv2026"
+    ){
 
-function updateClock(){
+        localStorage.setItem(
+            "login",
+            "true"
+        );
 
-let now=new Date();
+        window.location.href =
+        "dashboard.html";
 
-document.getElementById("clock")
-.innerHTML=now.toLocaleTimeString("id-ID");
+    }
 
-document.getElementById("date")
-.innerHTML=now.toLocaleDateString("id-ID");
+    else{
 
-}
+        alert(
+            "Username atau password salah!"
+        );
 
-setInterval(updateClock,1000);
-
-function logout(){
-
-location.reload();
+    }
 
 }
