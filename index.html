@@ -9,13 +9,25 @@ content="width=device-width,initial-scale=1.0">
 
 <title>CCTV Premium</title>
 
-<link rel="stylesheet"
+<link
+rel="stylesheet"
 href="style.css">
 
 </head>
 <body>
 
-<div class="login-card">
+<div
+style="
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+">
+
+<div class="glass"
+style="max-width:450px;width:100%;">
+
+<div class="title">
 
 <h1>
 
@@ -23,28 +35,65 @@ href="style.css">
 
 </h1>
 
-<p>
+</div>
+
+<div class="online">
 
 Silakan login
 
-</p>
+</div>
+
 
 <input
 id="username"
 type="text"
-placeholder="Username">
+placeholder="Username"
+
+style="
+width:100%;
+padding:18px;
+border:none;
+border-radius:20px;
+margin-bottom:15px;
+font-size:16px;
+">
+
 
 <input
 id="password"
 type="password"
-placeholder="Password">
+placeholder="Password"
+
+style="
+width:100%;
+padding:18px;
+border:none;
+border-radius:20px;
+margin-bottom:20px;
+font-size:16px;
+">
+
 
 <button
-onclick="login()">
+
+onclick="login()"
+
+style="
+width:100%;
+padding:18px;
+border:none;
+border-radius:20px;
+background:#2563eb;
+color:white;
+font-size:17px;
+cursor:pointer;
+">
 
 Masuk
 
 </button>
+
+</div>
 
 </div>
 
