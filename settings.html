@@ -4,25 +4,84 @@
 
 <meta charset="UTF-8">
 
-<link rel="stylesheet"
-href="style.css">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
 
 <title>Pengaturan</title>
+
+<link
+rel="stylesheet"
+href="style.css">
 
 </head>
 <body onload="checkLogin()">
 
+<div class="container">
+
+<!-- SIDEBAR -->
+
 <div class="sidebar">
 
-<h2>
+<div class="logo">
 
-📷 CCTV
-
-</h2>
+📷
 
 </div>
 
+<a
+class="nav-item"
+href="dashboard.html">
+
+🏠
+
+</a>
+
+
+<a
+class="nav-item"
+href="cameras.html">
+
+📹
+
+</a>
+
+
+<a
+class="nav-item"
+href="profile.html">
+
+👤
+
+</a>
+
+
+<a
+class="nav-item"
+href="settings.html">
+
+⚙️
+
+</a>
+
+
+<div
+class="nav-item red"
+onclick="logout()">
+
+🚪
+
+</div>
+
+</div>
+
+
+<!-- MAIN -->
+
 <div class="main">
+
+<div class="glass">
+
+<div class="title">
 
 <h1>
 
@@ -30,12 +89,98 @@ href="style.css">
 
 </h1>
 
-<button
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+🌙 Tema
+
+</div>
+
+<div>
+
+Dark Mode
+
+</div>
+
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+🔔 Notifikasi
+
+</div>
+
+<div>
+
+Aktif
+
+</div>
+
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+📱 Aplikasi
+
+</div>
+
+<div>
+
+Web App
+
+</div>
+
+</div>
+
+
+<div class="camera-card">
+
+<div>
+
+🔒 Keamanan
+
+</div>
+
+<div>
+
+Normal
+
+</div>
+
+</div>
+
+
+<div
+class="camera-card red"
 onclick="logout()">
 
-Logout
+<div>
 
-</button>
+🚪 Logout
+
+</div>
+
+<div>
+
+>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
