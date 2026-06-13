@@ -3,230 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CCTV Rumah</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#081225;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    color:white;
-}
-
-.card{
-    width:360px;
-    background:#1b263b;
-    border-radius:25px;
-    padding:40px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,.3);
-}
-
-h1{
-    margin-bottom:20px;
-}
-
-p{
-    color:#d7d7d7;
-    margin-bottom:20px;
-}
-
-input{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:12px;
-    font-size:16px;
-}
-
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    font-size:18px;
-    color:white;
-    cursor:pointer;
-}
-
-.green{
-    background:#22c55e;
-}
-
-.blue{
-    background:#3b82f6;
-}
-
-.red{
-    background:#ef4444;
-}
-
-.status{
-    color:#22c55e;
-    font-size:18px;
-    margin-bottom:20px;
-}
-
-.jam{
-    font-size:22px;
-    margin-bottom:25px;
-}
-
-#loginPage,
-#dashboardPage{
-    display:none;
-}
-
-</style>
+<title>CCTV Premium</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HALAMAN UTAMA -->
-<div class="card" id="homePage">
+<div class="page active" id="homePage">
+    <div class="card">
+        <h1>📷 CCTV Premium</h1>
+        <p>Selamat datang</p>
 
-<h1>📷 CCTV Rumah</h1>
-
-<p>
-Selamat datang.
-</p>
-
-<button class="green"
-onclick="showLogin()">
-Lihat CCTV
-</button>
-
+        <button class="green" onclick="showLogin()">
+            Lihat CCTV
+        </button>
+    </div>
 </div>
 
+<div class="page" id="loginPage">
+    <div class="card">
+        <h1>🔒 Login</h1>
 
-<!-- LOGIN -->
-<div class="card" id="loginPage">
+        <input id="username" type="text" placeholder="Username">
 
-<h1>🔒 Login</h1>
+        <input id="password" type="password" placeholder="Password">
 
-<input type="text"
-id="username"
-placeholder="Username">
-
-<input type="password"
-id="password"
-placeholder="Password">
-
-<button class="green"
-onclick="login()">
-Masuk
-</button>
-
+        <button class="green" onclick="login()">
+            Masuk
+        </button>
+    </div>
 </div>
 
+<div class="page" id="dashboardPage">
+    <div class="card">
 
-<!-- DASHBOARD -->
-<div class="card" id="dashboardPage">
+        <h1>📷 CCTV Premium</h1>
 
-<h1>📷 CCTV Rumah</h1>
+        <div class="status">
+            ● ONLINE
+        </div>
 
-<div class="status">
-● ONLINE
+        <div class="clock" id="clock">
+            00:00:00
+        </div>
+
+        <div class="date" id="date"></div>
+
+        <button class="blue menu">
+            Kamera Depan
+        </button>
+
+        <button class="blue menu">
+            Kamera Garasi
+        </button>
+
+        <button class="blue menu">
+            Kamera Belakang
+        </button>
+
+        <button class="red" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
 </div>
 
-<div class="jam"
-id="clock">
-00:00:00
-</div>
-
-<button class="blue">
-Kamera Depan
-</button>
-
-<br><br>
-
-<button class="blue">
-Kamera Garasi
-</button>
-
-<br><br>
-
-<button class="blue">
-Kamera Belakang
-</button>
-
-<br><br>
-
-<button class="red"
-onclick="logout()">
-Logout
-</button>
-
-</div>
-
-
-<script>
-
-function showLogin(){
-
-document.getElementById("homePage").style.display="none";
-document.getElementById("loginPage").style.display="block";
-
-}
-
-
-function login(){
-
-let username=document.getElementById("username").value;
-let password=document.getElementById("password").value;
-
-if(username==="keluarga" && password==="cctv2026"){
-
-document.getElementById("loginPage").style.display="none";
-document.getElementById("dashboardPage").style.display="block";
-
-}else{
-
-alert("Username atau password salah!");
-
-}
-
-}
-
-
-function logout(){
-
-document.getElementById("dashboardPage").style.display="none";
-document.getElementById("homePage").style.display="block";
-
-document.getElementById("username").value="";
-document.getElementById("password").value="";
-
-}
-
-
-function updateClock(){
-
-let now=new Date();
-
-let jam=String(now.getHours()).padStart(2,"0");
-let menit=String(now.getMinutes()).padStart(2,"0");
-let detik=String(now.getSeconds()).padStart(2,"0");
-
-document.getElementById("clock").innerHTML=
-jam+":"+menit+":"+detik;
-
-}
-
-setInterval(updateClock,1000);
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
