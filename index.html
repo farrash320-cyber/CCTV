@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCTV Rumah</title>
+
+<style>
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.container{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    width:320px;
+    text-align:center;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.lihat{
+    background:#22c55e;
+    color:white;
+}
+
+.download{
+    background:#3b82f6;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📷 CCTV Rumah</h1>
+    <p>Klik tombol di bawah untuk membuka V360 Pro.</p>
+
+    <button class="lihat" onclick="bukaCCTV()">
+        Lihat CCTV
+    </button>
+
+    <button class="download"
+    onclick="window.open('https://play.google.com/store/search?q=V360%20Pro&c=apps')">
+        Download V360 Pro
+    </button>
+</div>
+
+<script>
+function bukaCCTV(){
+    window.location.href = "v360pro://";
+}
+</script>
+
+</body>
+</html>
