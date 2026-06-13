@@ -1,5 +1,8 @@
+// ======================
 // LOGIN
-function login() {
+// ======================
+
+function login(){
 
     let username =
     document.getElementById("username").value;
@@ -7,10 +10,11 @@ function login() {
     let password =
     document.getElementById("password").value;
 
-    if (
-        username === "keluarga" &&
+    if(
+        username === "keluarga"
+        &&
         password === "cctv2026"
-    ) {
+    ){
 
         localStorage.setItem(
             "login",
@@ -20,7 +24,9 @@ function login() {
         window.location.href =
         "dashboard.html";
 
-    } else {
+    }
+
+    else{
 
         alert(
             "Username atau password salah!"
@@ -31,17 +37,20 @@ function login() {
 }
 
 
+// ======================
 // CEK LOGIN
-function checkLogin() {
+// ======================
 
-    let login =
+function checkLogin(){
+
+    let status =
     localStorage.getItem(
         "login"
     );
 
-    if (
-        login !== "true"
-    ) {
+    if(
+        status !== "true"
+    ){
 
         window.location.href =
         "index.html";
@@ -51,8 +60,11 @@ function checkLogin() {
 }
 
 
+// ======================
 // LOGOUT
-function logout() {
+// ======================
+
+function logout(){
 
     localStorage.removeItem(
         "login"
@@ -64,10 +76,40 @@ function logout() {
 }
 
 
-// UPDATE JAM
-function updateClock() {
+// ======================
+// AUTO LOGIN
+// ======================
 
-    let now = new Date();
+if(
+    window.location.pathname
+    .endsWith("index.html")
+){
+
+    let status =
+    localStorage.getItem(
+        "login"
+    );
+
+    if(
+        status === "true"
+    ){
+
+        window.location.href =
+        "dashboard.html";
+
+    }
+
+}
+
+
+// ======================
+// JAM DAN TANGGAL
+// ======================
+
+function updateClock(){
+
+    let now =
+    new Date();
 
     let clock =
     document.getElementById(
@@ -79,7 +121,7 @@ function updateClock() {
         "date"
     );
 
-    if (clock) {
+    if(clock){
 
         clock.innerHTML =
         now.toLocaleTimeString(
@@ -88,16 +130,16 @@ function updateClock() {
 
     }
 
-    if (date) {
+    if(date){
 
         date.innerHTML =
         now.toLocaleDateString(
             "id-ID",
             {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-                year: "numeric"
+                weekday:"long",
+                day:"numeric",
+                month:"long",
+                year:"numeric"
             }
         );
 
@@ -105,35 +147,57 @@ function updateClock() {
 
 }
 
+updateClock();
 
-// AUTO UPDATE
 setInterval(
     updateClock,
     1000
 );
 
-updateClock();
 
+// ======================
+// STATISTIK KAMERA
+// ======================
 
-// AUTO LOGIN
-if (
-    window.location.pathname.endsWith(
-        "index.html"
-    )
-) {
+function updateStats(){
 
-    let login =
-    localStorage.getItem(
-        "login"
+    let totalCamera =
+    document.getElementById(
+        "totalCamera"
     );
 
-    if (
-        login === "true"
-    ) {
+    let onlineCamera =
+    document.getElementById(
+        "onlineCamera"
+    );
 
-        window.location.href =
-        "dashboard.html";
+    if(totalCamera){
+
+        totalCamera.innerHTML =
+        "4";
 
     }
+
+    if(onlineCamera){
+
+        onlineCamera.innerHTML =
+        "4";
+
+    }
+
+}
+
+updateStats();
+
+
+// ======================
+// DARK MODE
+// ======================
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle(
+        "dark"
+    );
 
 }
