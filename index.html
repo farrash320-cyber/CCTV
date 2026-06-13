@@ -12,67 +12,81 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI,sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:#061224;
+    background:linear-gradient(135deg,#06101d,#091a32);
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-.card{
+.container{
     width:380px;
-    background:#162235;
-    border-radius:25px;
     padding:35px;
-    box-shadow:0 20px 40px rgba(0,0,0,.4);
+    border-radius:30px;
+
+    background:rgba(20,32,52,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.4);
+
 }
 
 .logo{
     text-align:center;
-    color:white;
-    margin-bottom:30px;
+}
+
+.logo-icon{
+    font-size:50px;
 }
 
 .logo h1{
-    font-size:42px;
+    color:white;
+    margin-top:10px;
 }
 
 .status{
     text-align:center;
     color:#22c55e;
-    margin-bottom:25px;
+    margin-top:25px;
     font-size:18px;
 }
 
 .clock{
     text-align:center;
     color:white;
-    font-size:40px;
+    font-size:52px;
     font-weight:bold;
+    margin-top:30px;
 }
 
 .date{
     text-align:center;
-    color:#c7c7c7;
-    margin-bottom:30px;
+    color:#d1d5db;
+    margin-top:10px;
+    margin-bottom:35px;
 }
 
-.item{
+.card{
     background:#1f3b63;
-    color:white;
     padding:18px 20px;
     border-radius:18px;
+    color:white;
     margin-bottom:15px;
     cursor:pointer;
     transition:.3s;
 }
 
-.item:hover{
-    background:#2d5ca0;
+.card:hover{
+    transform:translateY(-3px);
+    background:#2b4d7d;
 }
 
 .logout{
@@ -84,49 +98,57 @@ body{
 }
 
 </style>
+
 </head>
 <body>
 
-<div class="card">
+<div class="container">
 
     <div class="logo">
-        <h1>📷</h1>
-        <h2>CCTV Premium</h2>
+
+        <div class="logo-icon">
+            📷
+        </div>
+
+        <h1>CCTV Premium</h1>
+
     </div>
 
     <div class="status">
         ● ONLINE
     </div>
 
-    <div class="clock" id="clock">
+    <div class="clock"
+    id="clock">
         00:00:00
     </div>
 
-    <div class="date" id="date">
+    <div class="date"
+    id="date">
         -
     </div>
 
-    <div class="item">
+    <div class="card">
         📹 Kamera Depan
     </div>
 
-    <div class="item">
+    <div class="card">
         📹 Kamera Garasi
     </div>
 
-    <div class="item">
+    <div class="card">
         📹 Kamera Belakang
     </div>
 
-    <div class="item">
+    <div class="card">
         👤 Profil
     </div>
 
-    <div class="item">
+    <div class="card">
         ⚙️ Pengaturan
     </div>
 
-    <div class="item logout">
+    <div class="card logout">
         🚪 Logout
     </div>
 
