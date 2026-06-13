@@ -1,44 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CCTV Premium V3</title>
+<title>CCTV Premium</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#061224;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:380px;
+    background:#162235;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.logo{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+}
+
+.logo h1{
+    font-size:42px;
+}
+
+.status{
+    text-align:center;
+    color:#22c55e;
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.clock{
+    text-align:center;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.date{
+    text-align:center;
+    color:#c7c7c7;
+    margin-bottom:30px;
+}
+
+.item{
+    background:#1f3b63;
+    color:white;
+    padding:18px 20px;
+    border-radius:18px;
+    margin-bottom:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.item:hover{
+    background:#2d5ca0;
+}
+
+.logout{
+    background:#ef4444;
+}
+
+.logout:hover{
+    background:#dc2626;
+}
+
+</style>
 </head>
 <body>
 
-<div class="login-box">
+<div class="card">
 
-    <h1>📷 CCTV Premium</h1>
+    <div class="logo">
+        <h1>📷</h1>
+        <h2>CCTV Premium</h2>
+    </div>
 
-    <p>
-        Silakan login untuk melanjutkan
-    </p>
+    <div class="status">
+        ● ONLINE
+    </div>
 
-    <input
-    type="text"
-    id="username"
-    placeholder="Username">
+    <div class="clock" id="clock">
+        00:00:00
+    </div>
 
-    <input
-    type="password"
-    id="password"
-    placeholder="Password">
+    <div class="date" id="date">
+        -
+    </div>
 
-    <button onclick="login()">
+    <div class="item">
+        📹 Kamera Depan
+    </div>
 
-        Login
+    <div class="item">
+        📹 Kamera Garasi
+    </div>
 
-    </button>
+    <div class="item">
+        📹 Kamera Belakang
+    </div>
+
+    <div class="item">
+        👤 Profil
+    </div>
+
+    <div class="item">
+        ⚙️ Pengaturan
+    </div>
+
+    <div class="item logout">
+        🚪 Logout
+    </div>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+
+function updateClock(){
+
+    let now = new Date();
+
+    document.getElementById("clock").innerHTML =
+    now.toLocaleTimeString("id-ID");
+
+    document.getElementById("date").innerHTML =
+    now.toLocaleDateString("id-ID",{
+        weekday:"long",
+        day:"numeric",
+        month:"long",
+        year:"numeric"
+    });
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+
+</script>
 
 </body>
 </html>
