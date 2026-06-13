@@ -3,98 +3,38 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CCTV Premium V2</title>
+<title>CCTV Premium V3</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-<div class="container">
+<div class="login-box">
 
-<div class="sidebar">
+    <h1>📷 CCTV Premium</h1>
 
-<h2>📷 CCTV</h2>
+    <p>
+        Silakan login untuk melanjutkan
+    </p>
 
-<button onclick="showPage('dashboard')">
-Dashboard
-</button>
+    <input
+    type="text"
+    id="username"
+    placeholder="Username">
 
-<button onclick="showPage('camera')">
-Kamera
-</button>
+    <input
+    type="password"
+    id="password"
+    placeholder="Password">
 
-<button onclick="showPage('profile')">
-Profil
-</button>
+    <button onclick="login()">
 
-<button onclick="showPage('setting')">
-Pengaturan
-</button>
+        Login
 
-<button onclick="logout()">
-Logout
-</button>
-
-</div>
-
-
-<div class="content">
-
-<div id="dashboard" class="page active">
-
-<h1>Dashboard</h1>
-
-<div class="status">
-🟢 ONLINE
-</div>
-
-<div id="clock">
-00:00:00
-</div>
-
-<div id="date">
--
-</div>
-
-</div>
-
-
-<div id="camera" class="page">
-
-<h1>Kamera</h1>
-
-<button>📹 Kamera Depan</button>
-
-<button>📹 Kamera Garasi</button>
-
-<button>📹 Kamera Belakang</button>
-
-<button>📹 Kamera Ruang Tamu</button>
-
-</div>
-
-
-<div id="profile" class="page">
-
-<h1>Profil</h1>
-
-<p>Keluarga</p>
-
-</div>
-
-
-<div id="setting" class="page">
-
-<h1>Pengaturan</h1>
-
-<p>Dark Mode aktif</p>
-
-</div>
-
-</div>
+    </button>
 
 </div>
 
