@@ -3,121 +3,96 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>CCTV Premium</title>
+<title>CCTV Premium V2</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-<!-- HOME -->
-<div class="page active" id="homePage">
+<div class="container">
 
-<div class="card">
+<div class="sidebar">
 
-<h1>📷 CCTV Premium</h1>
+<h2>📷 CCTV</h2>
 
-<p>
-Selamat datang
-</p>
+<button onclick="showPage('dashboard')">
+Dashboard
+</button>
 
-<button class="green"
-onclick="showLogin()">
+<button onclick="showPage('camera')">
+Kamera
+</button>
 
-Lihat CCTV
+<button onclick="showPage('profile')">
+Profil
+</button>
 
+<button onclick="showPage('setting')">
+Pengaturan
+</button>
+
+<button onclick="logout()">
+Logout
 </button>
 
 </div>
 
-</div>
 
+<div class="content">
 
-<!-- LOGIN -->
-<div class="page" id="loginPage">
+<div id="dashboard" class="page active">
 
-<div class="card">
-
-<h1>🔒 Login</h1>
-
-<input
-type="text"
-id="username"
-placeholder="Username">
-
-<input
-type="password"
-id="password"
-placeholder="Password">
-
-<button
-class="green"
-onclick="login()">
-
-Masuk
-
-</button>
-
-</div>
-
-</div>
-
-
-
-<!-- DASHBOARD -->
-<div class="page" id="dashboardPage">
-
-<div class="card">
-
-<h1>📷 CCTV Premium</h1>
+<h1>Dashboard</h1>
 
 <div class="status">
-
-● ONLINE
-
+🟢 ONLINE
 </div>
 
-<div class="clock"
-id="clock">
-
+<div id="clock">
 00:00:00
-
 </div>
 
-<div class="date"
-id="date">
-
+<div id="date">
 -
+</div>
 
 </div>
 
-<button class="blue">
 
-📹 Kamera Depan
+<div id="camera" class="page">
 
-</button>
+<h1>Kamera</h1>
 
-<button class="blue">
+<button>📹 Kamera Depan</button>
 
-📹 Kamera Garasi
+<button>📹 Kamera Garasi</button>
 
-</button>
+<button>📹 Kamera Belakang</button>
 
-<button class="blue">
+<button>📹 Kamera Ruang Tamu</button>
 
-📹 Kamera Belakang
+</div>
 
-</button>
 
-<button
-class="red"
-onclick="logout()">
+<div id="profile" class="page">
 
-Logout
+<h1>Profil</h1>
 
-</button>
+<p>Keluarga</p>
+
+</div>
+
+
+<div id="setting" class="page">
+
+<h1>Pengaturan</h1>
+
+<p>Dark Mode aktif</p>
+
+</div>
 
 </div>
 
