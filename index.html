@@ -14,12 +14,12 @@
 
 body{
     background:#081225;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
+    color:white;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
-    color:white;
 }
 
 .container{
@@ -35,21 +35,7 @@ h1{
 }
 
 p{
-    margin-bottom:25px;
-}
-
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-.btn{
-    background:#22c55e;
-    color:white;
+    margin-bottom:20px;
 }
 
 input{
@@ -61,6 +47,24 @@ input{
     font-size:16px;
 }
 
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    color:white;
+}
+
+.btn-green{
+    background:#22c55e;
+}
+
+.btn-red{
+    background:#ef4444;
+}
+
 #loginPage,
 #cctvPage{
     display:none;
@@ -69,17 +73,18 @@ input{
 </head>
 <body>
 
-<!-- Halaman Awal -->
+<!-- BERANDA -->
 <div class="container" id="homePage">
     <h1>📷 CCTV Rumah</h1>
+
     <p>Klik tombol di bawah untuk masuk.</p>
 
-    <button class="btn" onclick="showLogin()">
+    <button class="btn-green" onclick="showLogin()">
         Lihat CCTV
     </button>
 </div>
 
-<!-- Halaman Login -->
+<!-- LOGIN -->
 <div class="container" id="loginPage">
     <h1>🔒 Login</h1>
 
@@ -87,12 +92,12 @@ input{
 
     <input type="password" id="password" placeholder="Password">
 
-    <button class="btn" onclick="login()">
+    <button class="btn-green" onclick="login()">
         Masuk
     </button>
 </div>
 
-<!-- Halaman CCTV -->
+<!-- HALAMAN CCTV -->
 <div class="container" id="cctvPage">
     <h1>📷 CCTV Rumah</h1>
 
@@ -100,44 +105,46 @@ input{
 
     <p>Halaman CCTV siap digunakan.</p>
 
-    <button class="btn" oneclick="logout()">
+    <button class="btn-red" onclick="logout()">
         Logout
     </button>
 </div>
 
 <script>
-function showLogin(){
-    document.getElementById("homePage").style.display="none";
-    document.getElementById("loginPage").style.display="block";
+
+function showLogin() {
+    document.getElementById("homePage").style.display = "none";
+    document.getElementById("loginPage").style.display = "block";
 }
 
-function login(){
+function login() {
 
-    let username=document.getElementById("username").value;
-    let password=document.getElementById("password").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-    if(username=="marelan" && password=="kebahagiaan"){
+    if (username === "marelan" && password === "kebahagiaan") {
 
-        document.getElementById("loginPage").style.display="none";
-        document.getElementById("cctvPage").style.display="block";
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("cctvPage").style.display = "block";
 
-    }else{
+    } else {
+
         alert("Username atau password salah!");
+
     }
 
 }
 
-function logout(){
+function logout() {
 
     document.getElementById("cctvPage").style.display = "none";
-
-    document.getElementById("loginPage").style.display = "block";
+    document.getElementById("homePage").style.display = "block";
 
     document.getElementById("username").value = "";
-
     document.getElementById("password").value = "";
 
 }
+
 </script>
 
 </body>
