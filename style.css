@@ -1,87 +1,92 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Segoe UI,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
 }
 
 body{
-    background:#08121f;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+background:#081225;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:white;
 }
 
 .page{
-    display:none;
+display:none;
+width:100%;
+justify-content:center;
+align-items:center;
 }
 
-.active{
-    display:block;
+.page.active{
+display:flex;
 }
 
 .card{
-    width:360px;
-    background:#162235;
-    padding:40px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 0 40px rgba(0,0,0,.5);
+width:380px;
+padding:40px;
+border-radius:25px;
+background:#18253c;
+box-shadow:0 0 30px rgba(0,0,0,.4);
+text-align:center;
 }
 
 h1{
-    margin-bottom:20px;
+margin-bottom:20px;
 }
 
 p{
-    margin-bottom:20px;
+color:#ccc;
+margin-bottom:20px;
 }
 
 input{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    margin-bottom:15px;
-    font-size:16px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+margin-bottom:15px;
+font-size:16px;
 }
 
 button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    color:white;
-    font-size:17px;
-    cursor:pointer;
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:17px;
+cursor:pointer;
+color:white;
+margin-bottom:15px;
 }
 
 .green{
-    background:#22c55e;
+background:#22c55e;
 }
 
 .blue{
-    background:#3b82f6;
-    margin-bottom:15px;
+background:#3b82f6;
 }
 
 .red{
-    background:#ef4444;
+background:#ef4444;
 }
 
 .status{
-    color:#22c55e;
-    margin-bottom:20px;
+font-size:18px;
+margin-bottom:20px;
+color:#22c55e;
 }
 
 .clock{
-    font-size:30px;
-    margin-bottom:10px;
+font-size:38px;
+margin-bottom:10px;
 }
 
 .date{
-    color:#cfcfcf;
-    margin-bottom:25px;
+color:#ccc;
+margin-bottom:25px;
 }
