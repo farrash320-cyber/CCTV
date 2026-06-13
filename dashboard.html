@@ -10,48 +10,99 @@
 <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body onload="updateClock()">
+
+<div class="container">
 
 <div class="card">
 
-<h1>📷 CCTV Premium</h1>
+<div class="logo">
 
-<div class="status">
+📷
+
+<h1>CCTV Premium</h1>
+
+</div>
+
+<div class="online">
+
 🟢 ONLINE
+
 </div>
 
-<div class="clock" id="clock">
+<div
+class="clock"
+id="clock">
+
 00:00:00
+
 </div>
 
-<div class="date" id="date">
+<div
+class="date"
+id="date">
+
 -
+
 </div>
 
-<button class="blue">
+
+<div class="menu">
 
 📹 Kamera Depan
 
-</button>
+<span>›</span>
 
-<button class="blue">
+</div>
+
+
+<div class="menu">
 
 📹 Kamera Garasi
 
-</button>
+<span>›</span>
 
-<button class="blue">
+</div>
+
+
+<div class="menu">
 
 📹 Kamera Belakang
 
-</button>
+<span>›</span>
 
-<button class="red"
+</div>
+
+
+<div class="menu">
+
+👤 Profil
+
+<span>›</span>
+
+</div>
+
+
+<div class="menu">
+
+⚙️ Pengaturan
+
+<span>›</span>
+
+</div>
+
+
+<div
+class="menu logout"
 onclick="logout()">
 
-Logout
+🚪 Logout
 
-</button>
+<span>›</span>
+
+</div>
+
+</div>
 
 </div>
 
