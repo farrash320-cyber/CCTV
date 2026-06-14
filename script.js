@@ -38,9 +38,7 @@ function login(){
             );
 
             alert(
-
                 "Selamat datang kembali!"
-
             );
 
             window.location.href =
@@ -51,9 +49,7 @@ function login(){
         else{
 
             alert(
-
                 "Username atau password salah!"
-
             );
 
             button.innerHTML =
@@ -70,42 +66,10 @@ function login(){
 function handleKey(event){
 
     if(
-
         event.key==="Enter"
-
     ){
 
         login();
-
-    }
-
-}
-
-
-
-function togglePassword(){
-
-    let password =
-
-    document.getElementById(
-        "password"
-    );
-
-    if(
-
-        password.type==="password"
-
-    ){
-
-        password.type =
-        "text";
-
-    }
-
-    else{
-
-        password.type =
-        "password";
 
     }
 
@@ -165,6 +129,7 @@ function updateClock(){
         clock.innerHTML =
         now.toLocaleTimeString(
             "id-ID"
+
         );
 
     }
@@ -180,6 +145,7 @@ function updateClock(){
                 month:"long",
                 year:"numeric"
             }
+
         );
 
     }
