@@ -2,7 +2,7 @@
 // LOGIN
 // =====================
 
-function login() {
+function login(){
 
     let username =
     document.getElementById(
@@ -14,23 +14,23 @@ function login() {
         "password"
     ).value;
 
-    if (
-        username === "keluarga"
+    if(
+        username==="keluarga"
         &&
-        password === "cctv2026"
-    ) {
+        password==="cctv2026"
+    ){
 
         localStorage.setItem(
             "login",
             "true"
         );
 
-        window.location.href =
+        window.location.href=
         "dashboard.html";
 
     }
 
-    else {
+    else{
 
         alert(
             "Username atau password salah!"
@@ -41,19 +41,20 @@ function login() {
 }
 
 
+
 // =====================
 // CEK LOGIN
 // =====================
 
-function checkLogin() {
+function checkLogin(){
 
-    if (
+    if(
         localStorage.getItem(
             "login"
-        ) !== "true"
-    ) {
+        )!=="true"
+    ){
 
-        window.location.href =
+        window.location.href=
         "index.html";
 
     }
@@ -61,132 +62,172 @@ function checkLogin() {
 }
 
 
+
 // =====================
 // AUTO LOGIN
 // =====================
 
-if (
-    window.location.pathname
-    .endsWith(
-        "index.html"
-    )
-) {
+if(
+window.location.pathname
+.endsWith("index.html")
+){
 
-    if (
-        localStorage.getItem(
-            "login"
-        ) === "true"
-    ) {
+if(
+localStorage.getItem(
+"login"
+)==="true"
+){
 
-        window.location.href =
-        "dashboard.html";
-
-    }
+window.location.href=
+"dashboard.html";
 
 }
+
+}
+
 
 
 // =====================
 // LOGOUT
 // =====================
 
-function logout() {
+function logout(){
 
-    localStorage.removeItem(
-        "login"
-    );
+localStorage.removeItem(
+"login"
+);
 
-    window.location.href =
-    "index.html";
+window.location.href=
+"index.html";
 
 }
+
 
 
 // =====================
 // JAM
 // =====================
 
-function updateClock() {
+function updateClock(){
 
-    let now =
-    new Date();
+let now=
+new Date();
 
-    let clock =
-    document.getElementById(
-        "clock"
-    );
+let clock=
+document.getElementById(
+"clock"
+);
 
-    let date =
-    document.getElementById(
-        "date"
-    );
+let date=
+document.getElementById(
+"date"
+);
 
-    if (clock) {
+if(clock){
 
-        clock.innerHTML =
-        now.toLocaleTimeString(
-            "id-ID"
-        );
+clock.innerHTML=
+now.toLocaleTimeString(
+"id-ID"
+);
 
-    }
+}
 
-    if (date) {
+if(date){
 
-        date.innerHTML =
-        now.toLocaleDateString(
-            "id-ID",
-            {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-                year: "numeric"
-            }
-        );
+date.innerHTML=
+now.toLocaleDateString(
+"id-ID",
+{
+weekday:"long",
+day:"numeric",
+month:"long",
+year:"numeric"
+}
+);
 
-    }
+}
 
 }
 
 updateClock();
 
 setInterval(
-    updateClock,
-    1000
+updateClock,
+1000
 );
 
-
-// =====================
-// BUKA V360 PRO
-// =====================
-
-function openV360() {
-
-    window.location.href =
-    "v360pro://";
-
-    setTimeout(
-        function () {
-
-            window.open(
-                "https://play.google.com/store/apps/details?id=com.macrovideo.v380pro",
-                "_blank"
-            );
-
-        },
-        1500
-    );
-
-}
 
 
 // =====================
 // DARK MODE
 // =====================
 
-function toggleDarkMode() {
+if(
+localStorage.getItem(
+"darkmode"
+)==="on"
+){
 
-    document.body.classList.toggle(
-        "dark"
-    );
+document.body.classList.add(
+"dark"
+);
+
+}
+
+
+function toggleDarkMode(){
+
+document.body.classList.toggle(
+"dark"
+);
+
+if(
+
+document.body.classList.contains(
+"dark"
+)
+
+){
+
+localStorage.setItem(
+"darkmode",
+"on"
+);
+
+}
+
+else{
+
+localStorage.setItem(
+"darkmode",
+"off"
+);
+
+}
+
+}
+
+
+
+// =====================
+// BUKA V360 PRO
+// =====================
+
+function openV360(){
+
+window.location.href=
+"v360pro://";
+
+setTimeout(function(){
+
+window.open(
+
+"https://play.google.com/store/apps/details?id=com.macrovideo.v380pro",
+
+"_blank"
+
+);
+
+},1500);
 
 }
