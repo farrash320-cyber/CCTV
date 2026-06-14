@@ -1,61 +1,198 @@
-function login(){
+// LOGIN
+
+function login() {
 
     let username =
     document.getElementById(
-    "username").value;
+        "username"
+    ).value;
 
     let password =
     document.getElementById(
-    "password").value;
+        "password"
+    ).value;
 
     let button =
     document.getElementById(
-    "loginButton");
+        "loginButton"
+    );
 
     button.innerHTML =
     "Masuk...";
 
-    setTimeout(function(){
 
-        if(
-        username==="keluarga"
-        &&
-        password==="cctv2026"
-        ){
+
+    setTimeout(function () {
+
+        if (
+
+            username === "keluarga"
+
+            &&
+
+            password === "cctv2026"
+
+        ) {
 
             localStorage.setItem(
-            "login",
-            "true");
+                "login",
+                "true"
+            );
 
-            window.location.href=
+            window.location.href =
             "dashboard.html";
 
         }
 
-        else{
+        else {
 
             alert(
-            "Username atau password salah!");
+                "Username atau password salah!"
+            );
 
-            button.innerHTML=
+            button.innerHTML =
             "Masuk";
 
         }
 
-    },1000);
+    }, 800);
 
 }
 
 
 
-function handleKey(event){
+// ENTER UNTUK LOGIN
 
-    if(
-    event.key==="Enter"
-    ){
+function handleKey(event) {
+
+    if (
+
+        event.key === "Enter"
+
+    ) {
 
         login();
 
     }
+
+}
+
+
+
+// CEK LOGIN
+
+function checkLogin() {
+
+    if (
+
+        localStorage.getItem(
+            "login"
+        ) !== "true"
+
+    ) {
+
+        window.location.href =
+        "index.html";
+
+    }
+
+}
+
+
+
+// LOGOUT
+
+function logout() {
+
+    localStorage.removeItem(
+        "login"
+    );
+
+    window.location.href =
+    "index.html";
+
+}
+
+
+
+// JAM REAL TIME
+
+function updateClock() {
+
+    let now =
+    new Date();
+
+    let clock =
+    document.getElementById(
+        "clock"
+    );
+
+    let date =
+    document.getElementById(
+        "date"
+    );
+
+
+
+    if (clock) {
+
+        clock.innerHTML =
+
+            now.toLocaleTimeString(
+                "id-ID"
+            );
+
+    }
+
+
+
+    if (date) {
+
+        date.innerHTML =
+
+            now.toLocaleDateString(
+                "id-ID",
+                {
+
+                    weekday:
+                        "long",
+
+                    day:
+                        "numeric",
+
+                    month:
+                        "long",
+
+                    year:
+                        "numeric"
+
+                }
+
+            );
+
+    }
+
+}
+
+
+
+updateClock();
+
+setInterval(
+    updateClock,
+    1000
+);
+
+
+
+// BUKA V360 PRO
+
+function openV360() {
+
+    alert(
+
+        "Silakan buka aplikasi V360 Pro."
+
+    );
 
 }
