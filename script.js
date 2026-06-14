@@ -1,39 +1,67 @@
 function login(){
 
-    let username =
+    let button =
     document.getElementById(
-        "username"
-    ).value;
+        "loginButton"
+    );
 
-    let password =
-    document.getElementById(
-        "password"
-    ).value;
+    button.innerHTML =
+    "Masuk...";
 
-    if(
-        username==="keluarga"
-        &&
-        password==="cctv2026"
-    ){
 
-        localStorage.setItem(
-            "login",
-            "true"
-        );
 
-        window.location.href=
-        "dashboard.html";
+    setTimeout(function(){
 
-    }
+        let username =
+        document.getElementById(
+            "username"
+        ).value;
 
-    else{
+        let password =
+        document.getElementById(
+            "password"
+        ).value;
 
-        alert(
-            "Username atau password salah!"
+        if(
 
-        );
+            username==="keluarga"
 
-    }
+            &&
+
+            password==="cctv2026"
+
+        ){
+
+            localStorage.setItem(
+                "login",
+                "true"
+            );
+
+            alert(
+
+                "Selamat datang kembali!"
+
+            );
+
+            window.location.href =
+            "dashboard.html";
+
+        }
+
+        else{
+
+            alert(
+
+                "Username atau password salah!"
+
+            );
+
+            button.innerHTML =
+            "Masuk";
+
+        }
+
+    },1000);
 
 }
 
@@ -42,10 +70,42 @@ function login(){
 function handleKey(event){
 
     if(
+
         event.key==="Enter"
+
     ){
 
         login();
+
+    }
+
+}
+
+
+
+function togglePassword(){
+
+    let password =
+
+    document.getElementById(
+        "password"
+    );
+
+    if(
+
+        password.type==="password"
+
+    ){
+
+        password.type =
+        "text";
+
+    }
+
+    else{
+
+        password.type =
+        "password";
 
     }
 
@@ -59,12 +119,11 @@ function checkLogin(){
 
         localStorage.getItem(
             "login"
-
         )!=="true"
 
     ){
 
-        window.location.href=
+        window.location.href =
         "index.html";
 
     }
@@ -79,7 +138,7 @@ function logout(){
         "login"
     );
 
-    window.location.href=
+    window.location.href =
     "index.html";
 
 }
@@ -103,7 +162,7 @@ function updateClock(){
 
     if(clock){
 
-        clock.innerHTML=
+        clock.innerHTML =
         now.toLocaleTimeString(
             "id-ID"
         );
@@ -112,7 +171,7 @@ function updateClock(){
 
     if(date){
 
-        date.innerHTML=
+        date.innerHTML =
         now.toLocaleDateString(
             "id-ID",
             {
@@ -138,7 +197,7 @@ setInterval(
 
 function openV360(){
 
-    window.location.href=
+    window.location.href =
     "v360pro://";
 
 }
