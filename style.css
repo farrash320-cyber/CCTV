@@ -1,1 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
+body{
+
+    background:
+    linear-gradient(
+    180deg,
+    #031326,
+    #071d3d);
+
+    color:white;
+
+}
+
+.main{
+
+    padding:20px;
+
+    padding-bottom:110px;
+
+}
+
+.glass{
+
+    background:
+
+    rgba(18,32,58,.88);
+
+    border:
+
+    1px solid rgba(
+    255,255,255,.1);
+
+    border-radius:35px;
+
+    padding:25px;
+
+    box-shadow:
+
+    0 0 30px rgba(
+    0,0,0,.4);
+
+}
+
+.title{
+
+    text-align:center;
+
+}
+
+.title h1{
+
+    font-size:32px;
+
+}
+
+.group{
+
+    margin-top:10px;
+
+    color:#7ea6ff;
+
+    letter-spacing:5px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+.online{
+
+    text-align:center;
+
+    color:#00ff66;
+
+    margin-top:20px;
+
+    font-size:24px;
+
+}
+
+.clock{
+
+    text-align:center;
+
+    font-size:60px;
+
+    font-weight:bold;
+
+    margin-top:30px;
+
+}
+
+.date{
+
+    text-align:center;
+
+    color:#d1d5db;
+
+    margin-top:10px;
+
+}
+
+.stat{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.stat-card{
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #1b3660,
+    #23457a);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 0 15px rgba(
+    37,99,235,.3);
+
+}
+
+.stat-card h2{
+
+    font-size:45px;
+
+}
+
+.stat-card p{
+
+    margin-top:10px;
+
+}
+
+.camera-card{
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #1b3660,
+    #23457a);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    margin-top:20px;
+
+}
+
+.bottom-nav{
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    background:#091a35;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    padding:18px;
+
+    border-top:
+
+    1px solid rgba(
+    255,255,255,.1);
+
+}
+
+.bottom-nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:28px;
+
+}
+
+.active{
+
+    color:#3b82f6 !important;
+
+}
