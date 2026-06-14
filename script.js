@@ -40,6 +40,15 @@ function login(){
 
 }
 
+function handleKey(event){
+
+    if(event.key==="Enter"){
+
+        login();
+
+    }
+
+}
 
 
 // =====================
