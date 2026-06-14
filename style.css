@@ -10,13 +10,15 @@ body{
     background:
     linear-gradient(
     180deg,
-    #031326,
+    #02111f,
     #071d3d,
-    #02101f);
+    #041225);
 
     color:white;
 
 }
+
+
 
 /* LOGIN */
 
@@ -38,11 +40,13 @@ body{
 
     width:100%;
 
-    max-width:480px;
+    max-width:500px;
 
     background:
 
-    rgba(18,32,58,.92);
+    rgba(18,32,58,.9);
+
+    backdrop-filter:blur(20px);
 
     border:
 
@@ -56,7 +60,7 @@ body{
     box-shadow:
 
     0 0 40px rgba(
-    0,0,0,.4);
+    0,0,0,.5);
 
 }
 
@@ -90,11 +94,24 @@ input{
 
     border-radius:22px;
 
-    font-size:17px;
-
     margin-bottom:20px;
 
+    font-size:17px;
+
     outline:none;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    box-shadow:
+
+    0 0 20px rgba(
+    37,99,235,.7);
 
 }
 
@@ -127,12 +144,12 @@ button{
 
 button:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
     box-shadow:
 
-    0 0 20px rgba(
-    37,99,235,.6);
+    0 0 25px rgba(
+    37,99,235,.7);
 
 }
 
@@ -145,6 +162,8 @@ button:hover{
     color:#d1d5db;
 
 }
+
+
 
 /* HALAMAN */
 
@@ -160,7 +179,9 @@ button:hover{
 
     background:
 
-    rgba(18,32,58,.92);
+    rgba(18,32,58,.88);
+
+    backdrop-filter:blur(25px);
 
     border:
 
@@ -174,7 +195,7 @@ button:hover{
     box-shadow:
 
     0 0 40px rgba(
-    0,0,0,.35);
+    0,0,0,.4);
 
 }
 
@@ -186,7 +207,7 @@ button:hover{
 
 .title h1{
 
-    font-size:42px;
+    font-size:40px;
 
 }
 
@@ -210,6 +231,8 @@ button:hover{
 
     margin-top:25px;
 
+    font-size:22px;
+
 }
 
 .clock{
@@ -221,6 +244,11 @@ button:hover{
     font-weight:bold;
 
     margin-top:30px;
+
+    text-shadow:
+
+    0 0 20px rgba(
+    255,255,255,.4);
 
 }
 
@@ -241,6 +269,7 @@ button:hover{
     display:grid;
 
     grid-template-columns:
+
     repeat(2,1fr);
 
     gap:18px;
@@ -258,7 +287,7 @@ button:hover{
 
     border-radius:28px;
 
-    padding:35px;
+    padding:30px;
 
     text-align:center;
 
@@ -273,13 +302,13 @@ button:hover{
     box-shadow:
 
     0 0 25px rgba(
-    37,99,235,.5);
+    37,99,235,.6);
 
 }
 
 .stat-card h2{
 
-    font-size:48px;
+    font-size:45px;
 
 }
 
@@ -311,9 +340,13 @@ button:hover{
     box-shadow:
 
     0 0 25px rgba(
-    37,99,235,.5);
+    37,99,235,.6);
 
 }
+
+
+
+/* BOTTOM NAVIGATION */
 
 .bottom-nav{
 
@@ -325,7 +358,11 @@ button:hover{
 
     bottom:0;
 
-    background:#091a35;
+    background:
+
+    rgba(9,26,53,.95);
+
+    backdrop-filter:blur(20px);
 
     display:flex;
 
@@ -342,97 +379,11 @@ button:hover{
 
 .bottom-nav a{
 
-    color:white;
-
-    text-decoration:none;
-
-    font-size:28px;
-
-    transition:.3s;
-
-}
-
-.bottom-nav a:hover{
-
-    color:#60a5fa;
-
-}
-
-.active{
-
-    color:#3b82f6 !important;
-
-}
-
-/* ===== PREMIUM EFFECT ===== */
-
-.clock{
-
-    text-shadow:
-    0 0 25px rgba(255,255,255,.4);
-
-}
-
-
-
-.stat-card{
-
-    transition:.3s;
-
-    cursor:pointer;
-
-}
-
-.stat-card:hover{
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-
-    0 0 30px rgba(
-    37,99,235,.6);
-
-}
-
-
-
-.camera-card{
-
-    transition:.3s;
-
-    cursor:pointer;
-
-}
-
-.camera-card:hover{
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-
-    0 0 30px rgba(
-    37,99,235,.6);
-
-}
-
-
-
-.bottom-nav{
-
-    backdrop-filter:
-    blur(20px);
-
-}
-
-
-
-.bottom-nav a{
-
     width:55px;
 
     height:55px;
+
+    border-radius:50%;
 
     display:flex;
 
@@ -440,13 +391,15 @@ button:hover{
 
     align-items:center;
 
-    border-radius:50%;
+    text-decoration:none;
+
+    color:white;
+
+    font-size:28px;
 
     transition:.3s;
 
 }
-
-
 
 .bottom-nav a:hover{
 
@@ -457,9 +410,7 @@ button:hover{
 
 }
 
-
-
-.bottom-nav .active{
+.active{
 
     background:
 
@@ -467,48 +418,6 @@ button:hover{
     180deg,
     #2563eb,
     #3b82f6);
-
-    box-shadow:
-
-    0 0 25px rgba(
-    37,99,235,.7);
-
-}
-
-
-
-.glass{
-
-    backdrop-filter:
-    blur(25px);
-
-}
-
-
-
-input:focus{
-
-    box-shadow:
-
-    0 0 20px rgba(
-    37,99,235,.6);
-
-}
-
-
-
-button{
-
-    transition:.3s;
-
-}
-
-
-
-button:hover{
-
-    transform:
-    translateY(-3px);
 
     box-shadow:
 
