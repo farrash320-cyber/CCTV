@@ -4,7 +4,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
+<meta
+name="viewport"
 content="width=device-width,initial-scale=1.0">
 
 <title>Pengaturan</title>
@@ -14,6 +15,7 @@ rel="stylesheet"
 href="style.css">
 
 </head>
+
 <body onload="checkLogin()">
 
 <div class="container">
@@ -36,7 +38,6 @@ href="dashboard.html">
 
 </a>
 
-
 <a
 class="nav-item"
 href="cameras.html">
@@ -44,7 +45,6 @@ href="cameras.html">
 📹
 
 </a>
-
 
 <a
 class="nav-item"
@@ -54,7 +54,6 @@ href="profile.html">
 
 </a>
 
-
 <a
 class="nav-item"
 href="settings.html">
@@ -62,7 +61,6 @@ href="settings.html">
 ⚙️
 
 </a>
-
 
 <div
 class="nav-item red"
@@ -92,22 +90,33 @@ onclick="logout()">
 </div>
 
 
-<div class="camera-card">
+<!-- DARK MODE -->
+
+<div
+class="camera-card"
+onclick="toggleDarkMode()">
 
 <div>
 
-🌙 Tema
+🌙 Dark Mode
+
+<br><br>
+
+Tema gelap premium
 
 </div>
 
 <div>
 
-Dark Mode
+>
 
 </div>
 
 </div>
 
+
+
+<!-- NOTIFIKASI -->
 
 <div class="camera-card">
 
@@ -115,50 +124,71 @@ Dark Mode
 
 🔔 Notifikasi
 
-</div>
-
-<div>
+<br><br>
 
 Aktif
 
 </div>
 
+<div>
+
+>
+
 </div>
 
+</div>
+
+
+
+<!-- PWA -->
 
 <div class="camera-card">
 
 <div>
 
-📱 Aplikasi
+📱 Web App
+
+<br><br>
+
+Siap dipasang seperti aplikasi
 
 </div>
 
 <div>
 
-Web App
+>
 
 </div>
 
 </div>
 
+
+
+<!-- VERSI -->
 
 <div class="camera-card">
 
 <div>
 
-🔒 Keamanan
+ℹ️ Tentang
+
+<br><br>
+
+CCTV Premium V15 Ultimate
 
 </div>
 
 <div>
 
-Normal
+>
 
 </div>
 
 </div>
 
+
+
+<!-- LOGOUT -->
 
 <div
 class="camera-card red"
@@ -167,6 +197,10 @@ onclick="logout()">
 <div>
 
 🚪 Logout
+
+<br><br>
+
+Keluar dari akun
 
 </div>
 
