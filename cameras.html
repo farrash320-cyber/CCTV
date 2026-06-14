@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
 
 <meta
 name="viewport"
-content="width=device-width,initial-scale=1.0">
+content="width=device-width, initial-scale=1.0">
 
-<title>Semua Kamera</title>
+<title>Kamera</title>
 
 <link
 rel="stylesheet"
@@ -16,7 +17,8 @@ href="style.css">
 
 </head>
 
-<body onload="checkLogin()">
+<body
+onload="checkLogin()">
 
 <div class="container">
 
@@ -30,6 +32,7 @@ href="style.css">
 
 </div>
 
+
 <a
 class="nav-item"
 href="dashboard.html">
@@ -37,6 +40,7 @@ href="dashboard.html">
 🏠
 
 </a>
+
 
 <a
 class="nav-item"
@@ -46,6 +50,7 @@ href="cameras.html">
 
 </a>
 
+
 <a
 class="nav-item"
 href="profile.html">
@@ -54,6 +59,7 @@ href="profile.html">
 
 </a>
 
+
 <a
 class="nav-item"
 href="settings.html">
@@ -61,6 +67,7 @@ href="settings.html">
 ⚙️
 
 </a>
+
 
 <div
 class="nav-item red"
@@ -71,6 +78,7 @@ onclick="logout()">
 </div>
 
 </div>
+
 
 
 <!-- MAIN -->
@@ -91,17 +99,17 @@ onclick="logout()">
 
 
 
-<!-- KAMERA DEPAN -->
-
 <div
 class="camera-card"
 onclick="openV360()">
 
-<div>
+<h2>
 
 📷 Kamera Depan
 
-<br><br>
+</h2>
+
+<br>
 
 🟢 Online
 
@@ -111,27 +119,19 @@ onclick="openV360()">
 
 </div>
 
-<div>
 
->
-
-</div>
-
-</div>
-
-
-
-<!-- KAMERA GARASI -->
 
 <div
 class="camera-card"
 onclick="openV360()">
 
-<div>
+<h2>
 
 📷 Kamera Garasi
 
-<br><br>
+</h2>
+
+<br>
 
 🟢 Online
 
@@ -141,27 +141,19 @@ onclick="openV360()">
 
 </div>
 
-<div>
 
->
-
-</div>
-
-</div>
-
-
-
-<!-- KAMERA BELAKANG -->
 
 <div
 class="camera-card"
 onclick="openV360()">
 
-<div>
+<h2>
 
 📷 Kamera Belakang
 
-<br><br>
+</h2>
+
+<br>
 
 🟢 Online
 
@@ -171,27 +163,19 @@ onclick="openV360()">
 
 </div>
 
-<div>
 
->
-
-</div>
-
-</div>
-
-
-
-<!-- RUANG TAMU -->
 
 <div
 class="camera-card"
 onclick="openV360()">
 
-<div>
+<h2>
 
 📷 Ruang Tamu
 
-<br><br>
+</h2>
+
+<br>
 
 🟢 Online
 
@@ -201,54 +185,7 @@ onclick="openV360()">
 
 </div>
 
-<div>
 
->
-
-</div>
-
-</div>
-
-
-
-<!-- STATISTIK -->
-
-<div class="stat">
-
-<div class="stat-card">
-
-<h2>
-
-4
-
-</h2>
-
-<p>
-
-Total Kamera
-
-</p>
-
-</div>
-
-
-<div class="stat-card">
-
-<h2>
-
-4
-
-</h2>
-
-<p>
-
-Kamera Aktif
-
-</p>
-
-</div>
-
-</div>
 
 </div>
 
@@ -259,4 +196,5 @@ Kamera Aktif
 <script src="script.js"></script>
 
 </body>
+
 </html>
