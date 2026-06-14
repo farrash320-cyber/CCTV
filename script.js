@@ -1,5 +1,8 @@
+// =====================
 // LOGIN
-function login(){
+// =====================
+
+function login() {
 
     let username =
     document.getElementById(
@@ -11,23 +14,23 @@ function login(){
         "password"
     ).value;
 
-    if(
-        username==="keluarga"
+    if (
+        username === "keluarga"
         &&
-        password==="cctv2026"
-    ){
+        password === "cctv2026"
+    ) {
 
         localStorage.setItem(
             "login",
             "true"
         );
 
-        window.location.href=
+        window.location.href =
         "dashboard.html";
 
     }
 
-    else{
+    else {
 
         alert(
             "Username atau password salah!"
@@ -38,17 +41,19 @@ function login(){
 }
 
 
-
+// =====================
 // CEK LOGIN
-function checkLogin(){
+// =====================
 
-    if(
+function checkLogin() {
+
+    if (
         localStorage.getItem(
             "login"
-        )!=="true"
-    ){
+        ) !== "true"
+    ) {
 
-        window.location.href=
+        window.location.href =
         "index.html";
 
     }
@@ -56,23 +61,52 @@ function checkLogin(){
 }
 
 
+// =====================
+// AUTO LOGIN
+// =====================
 
+if (
+    window.location.pathname
+    .endsWith(
+        "index.html"
+    )
+) {
+
+    if (
+        localStorage.getItem(
+            "login"
+        ) === "true"
+    ) {
+
+        window.location.href =
+        "dashboard.html";
+
+    }
+
+}
+
+
+// =====================
 // LOGOUT
-function logout(){
+// =====================
+
+function logout() {
 
     localStorage.removeItem(
         "login"
     );
 
-    window.location.href=
+    window.location.href =
     "index.html";
 
 }
 
 
-
+// =====================
 // JAM
-function updateClock(){
+// =====================
+
+function updateClock() {
 
     let now =
     new Date();
@@ -87,25 +121,25 @@ function updateClock(){
         "date"
     );
 
-    if(clock){
+    if (clock) {
 
-        clock.innerHTML=
+        clock.innerHTML =
         now.toLocaleTimeString(
             "id-ID"
         );
 
     }
 
-    if(date){
+    if (date) {
 
-        date.innerHTML=
+        date.innerHTML =
         now.toLocaleDateString(
             "id-ID",
             {
-                weekday:"long",
-                day:"numeric",
-                month:"long",
-                year:"numeric"
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric"
             }
         );
 
@@ -121,30 +155,38 @@ setInterval(
 );
 
 
-
+// =====================
 // BUKA V360 PRO
-function openV360(){
+// =====================
 
-    // mencoba membuka aplikasi
+function openV360() {
 
     window.location.href =
     "v360pro://";
 
+    setTimeout(
+        function () {
+
+            window.open(
+                "https://play.google.com/store/apps/details?id=com.macrovideo.v380pro",
+                "_blank"
+            );
+
+        },
+        1500
+    );
+
+}
 
 
-    // jika gagal,
-    // setelah 2 detik arahkan ke Play Store
+// =====================
+// DARK MODE
+// =====================
 
-    setTimeout(function(){
+function toggleDarkMode() {
 
-        window.open(
-
-        "https://play.google.com/store/apps/details?id=com.macrovideo.v380pro",
-
-        "_blank"
-
-        );
-
-    },2000);
+    document.body.classList.toggle(
+        "dark"
+    );
 
 }
