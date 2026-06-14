@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI,sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
@@ -10,16 +10,10 @@ body{
     background:
     linear-gradient(
     180deg,
-    #041225,
-    #0a1d3a);
+    #031326,
+    #071d3d);
 
     color:white;
-
-}
-
-.container{
-
-    min-height:100vh;
 
 }
 
@@ -27,17 +21,29 @@ body{
 
     padding:20px;
 
+    padding-bottom:110px;
+
 }
 
 .glass{
 
     background:
 
-    rgba(18,32,58,.9);
+    rgba(18,32,58,.88);
 
-    border-radius:30px;
+    border:
+
+    1px solid rgba(
+    255,255,255,.1);
+
+    border-radius:35px;
 
     padding:25px;
+
+    box-shadow:
+
+    0 0 30px rgba(
+    0,0,0,.4);
 
 }
 
@@ -53,6 +59,20 @@ body{
 
 }
 
+.group{
+
+    margin-top:10px;
+
+    color:#7ea6ff;
+
+    letter-spacing:5px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
 .online{
 
     text-align:center;
@@ -61,17 +81,19 @@ body{
 
     margin-top:20px;
 
+    font-size:24px;
+
 }
 
 .clock{
 
     text-align:center;
 
-    font-size:50px;
+    font-size:60px;
 
     font-weight:bold;
 
-    margin-top:25px;
+    margin-top:30px;
 
 }
 
@@ -92,6 +114,7 @@ body{
     display:grid;
 
     grid-template-columns:
+
     repeat(2,1fr);
 
     gap:15px;
@@ -100,39 +123,52 @@ body{
 
 .stat-card{
 
-    background:#1b3660;
+    background:
 
-    padding:25px;
+    linear-gradient(
+    180deg,
+    #1b3660,
+    #23457a);
 
-    border-radius:20px;
+    border-radius:25px;
+
+    padding:30px;
 
     text-align:center;
+
+    box-shadow:
+
+    0 0 15px rgba(
+    37,99,235,.3);
 
 }
 
 .stat-card h2{
 
-    font-size:40px;
+    font-size:45px;
+
+}
+
+.stat-card p{
+
+    margin-top:10px;
 
 }
 
 .camera-card{
 
-    background:#1b3660;
+    background:
+
+    linear-gradient(
+    180deg,
+    #1b3660,
+    #23457a);
+
+    border-radius:25px;
 
     padding:25px;
 
-    border-radius:20px;
-
     margin-top:20px;
-
-    cursor:pointer;
-
-}
-
-.camera-card:active{
-
-    transform:scale(.97);
 
 }
 
@@ -140,11 +176,11 @@ body{
 
     position:fixed;
 
-    bottom:0;
-
     left:0;
 
     right:0;
+
+    bottom:0;
 
     background:#091a35;
 
@@ -152,7 +188,12 @@ body{
 
     justify-content:space-around;
 
-    padding:15px;
+    padding:18px;
+
+    border-top:
+
+    1px solid rgba(
+    255,255,255,.1);
 
 }
 
@@ -166,50 +207,8 @@ body{
 
 }
 
-input{
+.active{
 
-    width:100%;
-
-    padding:18px;
-
-    border:none;
-
-    border-radius:20px;
-
-    margin-top:20px;
-
-    font-size:17px;
-
-}
-
-button{
-
-    width:100%;
-
-    padding:18px;
-
-    border:none;
-
-    border-radius:20px;
-
-    background:#2563eb;
-
-    color:white;
-
-    font-size:18px;
-
-    margin-top:20px;
-
-}
-
-@media(min-width:768px){
-
-    .glass{
-
-        max-width:900px;
-
-        margin:auto;
-
-    }
+    color:#3b82f6 !important;
 
 }
