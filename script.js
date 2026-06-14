@@ -1,19 +1,20 @@
-// ======================
 // LOGIN
-// ======================
-
 function login(){
 
     let username =
-    document.getElementById("username").value;
+    document.getElementById(
+        "username"
+    ).value;
 
     let password =
-    document.getElementById("password").value;
+    document.getElementById(
+        "password"
+    ).value;
 
     if(
-        username === "keluarga"
+        username==="keluarga"
         &&
-        password === "cctv2026"
+        password==="cctv2026"
     ){
 
         localStorage.setItem(
@@ -21,7 +22,7 @@ function login(){
             "true"
         );
 
-        window.location.href =
+        window.location.href=
         "dashboard.html";
 
     }
@@ -37,22 +38,17 @@ function login(){
 }
 
 
-// ======================
-// CEK LOGIN
-// ======================
 
+// CEK LOGIN
 function checkLogin(){
 
-    let status =
-    localStorage.getItem(
-        "login"
-    );
-
     if(
-        status !== "true"
+        localStorage.getItem(
+            "login"
+        )!=="true"
     ){
 
-        window.location.href =
+        window.location.href=
         "index.html";
 
     }
@@ -60,52 +56,22 @@ function checkLogin(){
 }
 
 
-// ======================
-// LOGOUT
-// ======================
 
+// LOGOUT
 function logout(){
 
     localStorage.removeItem(
         "login"
     );
 
-    window.location.href =
+    window.location.href=
     "index.html";
 
 }
 
 
-// ======================
-// AUTO LOGIN
-// ======================
 
-if(
-    window.location.pathname
-    .endsWith("index.html")
-){
-
-    let status =
-    localStorage.getItem(
-        "login"
-    );
-
-    if(
-        status === "true"
-    ){
-
-        window.location.href =
-        "dashboard.html";
-
-    }
-
-}
-
-
-// ======================
-// JAM DAN TANGGAL
-// ======================
-
+// JAM
 function updateClock(){
 
     let now =
@@ -123,7 +89,7 @@ function updateClock(){
 
     if(clock){
 
-        clock.innerHTML =
+        clock.innerHTML=
         now.toLocaleTimeString(
             "id-ID"
         );
@@ -132,7 +98,7 @@ function updateClock(){
 
     if(date){
 
-        date.innerHTML =
+        date.innerHTML=
         now.toLocaleDateString(
             "id-ID",
             {
@@ -155,49 +121,30 @@ setInterval(
 );
 
 
-// ======================
-// STATISTIK KAMERA
-// ======================
 
-function updateStats(){
+// BUKA V360 PRO
+function openV360(){
 
-    let totalCamera =
-    document.getElementById(
-        "totalCamera"
-    );
+    // mencoba membuka aplikasi
 
-    let onlineCamera =
-    document.getElementById(
-        "onlineCamera"
-    );
-
-    if(totalCamera){
-
-        totalCamera.innerHTML =
-        "4";
-
-    }
-
-    if(onlineCamera){
-
-        onlineCamera.innerHTML =
-        "4";
-
-    }
-
-}
-
-updateStats();
+    window.location.href =
+    "v360pro://";
 
 
-// ======================
-// DARK MODE
-// ======================
 
-function toggleDarkMode(){
+    // jika gagal,
+    // setelah 2 detik arahkan ke Play Store
 
-    document.body.classList.toggle(
-        "dark"
-    );
+    setTimeout(function(){
+
+        window.open(
+
+        "https://play.google.com/store/apps/details?id=com.macrovideo.v380pro",
+
+        "_blank"
+
+        );
+
+    },2000);
 
 }
