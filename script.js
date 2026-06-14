@@ -1,6 +1,6 @@
 // LOGIN
 
-function login() {
+function login(){
 
     let username =
     document.getElementById(
@@ -22,21 +22,25 @@ function login() {
 
 
 
-    setTimeout(function () {
+    setTimeout(function(){
 
-        if (
+        if(
 
-            username === "keluarga"
+            username==="keluarga"
 
             &&
 
-            password === "cctv2026"
+            password==="cctv2026"
 
-        ) {
+        ){
 
             localStorage.setItem(
                 "login",
                 "true"
+            );
+
+            alert(
+                "👋 Selamat Datang\n\nDIFFARRAS GROUP"
             );
 
             window.location.href =
@@ -44,7 +48,7 @@ function login() {
 
         }
 
-        else {
+        else{
 
             alert(
                 "Username atau password salah!"
@@ -55,7 +59,7 @@ function login() {
 
         }
 
-    }, 800);
+    },800);
 
 }
 
@@ -63,13 +67,11 @@ function login() {
 
 // ENTER UNTUK LOGIN
 
-function handleKey(event) {
+function handleKey(event){
 
-    if (
-
-        event.key === "Enter"
-
-    ) {
+    if(
+        event.key==="Enter"
+    ){
 
         login();
 
@@ -79,19 +81,49 @@ function handleKey(event) {
 
 
 
+// SHOW PASSWORD
+
+function togglePassword(){
+
+    let password =
+
+    document.getElementById(
+        "password"
+    );
+
+    if(
+
+        password.type==="password"
+
+    ){
+
+        password.type="text";
+
+    }
+
+    else{
+
+        password.type="password";
+
+    }
+
+}
+
+
+
 // CEK LOGIN
 
-function checkLogin() {
+function checkLogin(){
 
-    if (
+    if(
 
         localStorage.getItem(
             "login"
-        ) !== "true"
+        )!=="true"
 
-    ) {
+    ){
 
-        window.location.href =
+        window.location.href=
         "index.html";
 
     }
@@ -102,22 +134,22 @@ function checkLogin() {
 
 // LOGOUT
 
-function logout() {
+function logout(){
 
     localStorage.removeItem(
         "login"
     );
 
-    window.location.href =
+    window.location.href=
     "index.html";
 
 }
 
 
 
-// JAM REAL TIME
+// JAM
 
-function updateClock() {
+function updateClock(){
 
     let now =
     new Date();
@@ -134,41 +166,43 @@ function updateClock() {
 
 
 
-    if (clock) {
+    if(clock){
 
         clock.innerHTML =
 
-            now.toLocaleTimeString(
-                "id-ID"
-            );
+        now.toLocaleTimeString(
+            "id-ID"
+        );
 
     }
 
 
 
-    if (date) {
+    if(date){
 
         date.innerHTML =
 
-            now.toLocaleDateString(
-                "id-ID",
-                {
+        now.toLocaleDateString(
 
-                    weekday:
-                        "long",
+            "id-ID",
 
-                    day:
-                        "numeric",
+            {
 
-                    month:
-                        "long",
+                weekday:
+                "long",
 
-                    year:
-                        "numeric"
+                day:
+                "numeric",
 
-                }
+                month:
+                "long",
 
-            );
+                year:
+                "numeric"
+
+            }
+
+        );
 
     }
 
@@ -179,19 +213,22 @@ function updateClock() {
 updateClock();
 
 setInterval(
+
     updateClock,
+
     1000
+
 );
 
 
 
-// BUKA V360 PRO
+// V360 PRO
 
-function openV360() {
+function openV360(){
 
     alert(
 
-        "Silakan buka aplikasi V360 Pro."
+        "📷 Silakan buka aplikasi V360 Pro"
 
     );
 
