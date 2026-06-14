@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
@@ -65,13 +64,6 @@ outline:none;
 ">
 
 
-
-<div
-style="
-position:relative;
-margin-bottom:20px;
-">
-
 <input
 type="password"
 id="password"
@@ -82,44 +74,30 @@ width:100%;
 padding:18px;
 border:none;
 border-radius:20px;
+margin-bottom:20px;
 font-size:16px;
 outline:none;
 ">
-
-
-<button
-
-onclick="togglePassword()"
-
-style="
-position:absolute;
-right:15px;
-top:50%;
-transform:translateY(-50%);
-border:none;
-background:none;
-font-size:18px;
-cursor:pointer;
-">
-
-👁
-
-</button>
-
-</div>
 
 
 
 <div
 style="
 margin-bottom:25px;
+display:flex;
+align-items:center;
+gap:10px;
 ">
 
 <input
 type="checkbox"
 id="remember">
 
-Ingati saya
+<label for="remember">
+
+Ingat saya
+
+</label>
 
 </div>
 
@@ -165,5 +143,4 @@ color:#d1d5db;
 <script src="script.js"></script>
 
 </body>
-
 </html>
