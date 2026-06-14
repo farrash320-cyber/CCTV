@@ -9,7 +9,7 @@
 name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>CCTV Premium V21</title>
+<title>CCTV Premium V21 Ultimate</title>
 
 <link
 rel="stylesheet"
@@ -29,11 +29,24 @@ href="style.css">
 
 </h1>
 
+<div
+class="group"
+style="
+text-align:center;
+margin-top:15px;
+">
+
+DIFFARRAS GROUP
+
+</div>
+
+
 <p>
 
 Silakan login
 
 </p>
+
 
 
 <input
@@ -43,11 +56,41 @@ placeholder="Username"
 onkeydown="handleKey(event)">
 
 
+
+<div
+style="
+position:relative;
+">
+
 <input
 type="password"
 id="password"
 placeholder="Password"
-onkeydown="handleKey(event)">
+onkeydown="handleKey(event)"
+style="
+padding-right:70px;
+">
+
+
+<span
+
+onclick="togglePassword()"
+
+style="
+position:absolute;
+right:25px;
+top:22px;
+font-size:22px;
+cursor:pointer;
+user-select:none;
+">
+
+👁
+
+</span>
+
+</div>
+
 
 
 <button
@@ -59,9 +102,10 @@ Masuk
 </button>
 
 
+
 <div class="version">
 
-🔥 V21 Ultimate
+🔥 V21 Ultimate Pro Luxury
 
 </div>
 
